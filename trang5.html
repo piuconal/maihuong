@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kim Boi Tourism</title>
+    <link rel="stylesheet" href="trang1.css" />
+    <link rel="icon" href="assets/img/logo.png" />
+    <script src="https://kit.fontawesome.com/f0add9272d.js"></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+        <b style="font-size: 40px; color: #fafafa; margin-top: 170px;">QUẢN LÝ HOẠT ĐỘNG DU LỊCH</b>
+    </header>
+    <!-- List -->
+    <div id="list">
+    <div class="close">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <ul id="menu">
+        <li><a href="trang1.html"><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Sản phẩm du lịch</a></li>
+        <li>
+            <a href=""><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Tổ chức không gian phát triển du lịch</a>
+            <ul>
+                <li><a href="trang2.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Các khu, điểm du lịch chính</a></li>
+                <li><a href="trang3.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Các tour, tuyến du lịch</a></li>
+            </ul>
+        </li>
+
+        <li><a href="trang4.html"><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Đầu tư phát triển du lịch</a></li>
+        <li><a href="trang5.html"><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Quản lý hoạt động du lịch</a></li>
+        <li>
+            <a href=""><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Các điểm tài nguyên du lịch</a>
+            <ul>
+                <li><a href="trang6.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Tài nguyên du lịch tự nhiên</a></li>
+                <li>
+                    <a href="trang7.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Tài nguyên du lịch nhân văn</a>
+                    <ul>
+                        <li><a href="#"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Di tích khảo cổ</a></li>
+                        <li><a href="#"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Lễ hội</a></li>
+                        <li><a href="#"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Ẩm thực</a></li>
+                        <li><a href="#"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Bản sắc văn hóa dân tộc</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <img style="position: absolute; width: 350px; height: 170px;bottom: 0;" src="assets/img/welcome.gif" alt="">
+    </div>
+    <!-- nav -->
+    <nav>
+      <div class="menu">
+        <i class="fa-solid fa-bars" style="color: #fafafa"></i>
+      </div>
+      <div class="logo">
+        <img id="logo" src="/assets/img/logo.png" alt="" />
+      </div>
+      <div class="contact">
+        <div class="lang">
+          <p id="login">Quản lý</p>
+          <div id="overlay"></div>
+          <div id="loginPopup" style="color: black; border-radius: 20px;">
+            <form id="loginForm" method="post">
+              <label for="username">Tài khoản:</label><br>
+              <input style="width: 200px; margin-top: 10px;" type="text" id="username" name="username"><br>
+              <br><label style="margin-top: 20px;" for="pwd">Mật khẩu:</label><br>
+              <input style="width: 200px; margin-top: 10px;" type="password" id="pwd" name="password"><br><br>
+              <button type="submit">Đăng nhập</button>
+              <button type="button" onclick="closeLoginPopup()">Đóng</button>
+            </form>
+          </div>
+          <p>Tiếng Việt</p>
+          <p>English</p>
+          <p>中文</p>
+        </div>
+        <p>Hotline: 1900 1900; ZALO, VIBER (+84)222.666.888</p>
+      </div>
+    </nav>
+
+    <!-- comment -->
+    <div class="comment-icon">
+      <i class="fa-solid fa-comment"></i>
+    </div>
+    <!-- chat -->
+    <div class="popup" id="commentPopup">
+      <!-- Popup content -->
+      <div class="popup-content">
+        <div class="back1">
+          <span class="close-btn">&times;</span>
+          <i>Vui lòng điền thông tin và gửi phản hồi tới chúng tôi</i>
+          <b>Xin chân thành cảm ơn!</b>
+        </div>
+        <div class="back2">
+          <form id="feedbackForm">
+            <div class="form-group">
+              <label for="name">Tên</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="feedback">Đánh giá (góp ý)</label>
+              <textarea id="feedback" name="feedback" required></textarea>
+            </div>
+
+            <button type="submit">
+              <i class="fa-regular fa-paper-plane"></i>
+              <span>Hoàn tất</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="content" style="width: 1200px;">
+      <ul style="line-height: 30px;width: 1200px; display: flex; flex-direction: column;gap: 40px; margin-top: 30px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <p>Hoạt động du lịch ở huyện Kim Bôi là đối tượng của hệ thống quản lý về du lịch của tỉnh Hòa Bình và huyện Kim Bôi gồm các chủ thể:</p>
+        <li>UBND tỉnh Hòa Bình: Là cơ quan quản lý chung, cao nhất đối với toàn bộ hoạt động du lịch trên địa bàn tỉnh Hòa Bình, trong đó có huyện Kim Bôi.</li>
+        <li>Sở Văn hóa, Thể thao và Du lịch Hòa Bình: Là cơ quan chuyên môn về du lịch của UBND tỉnh Hòa Bình.</li>
+        <li>UBND huyện Kim Bôi: Là cơ quan quản lý cao nhất về du lịch trên địa bàn huyện Kim Bôi. Công tác quản lý nhà nước về du lịch đã được UBND huyện quan tâm chỉ đạo, tạo tiền đề cho sự phát triển của du lịch huyện. </li>
+        <li>Phòng Văn hóa và Thông tin là cơ quan chuyên môn giúp UBND huyện trong hoạt động quản lý nhà nước về du lịch trên địa bàn huyện. Phòng Văn hóa và Thông tin đã có cán bộ chuyên trách về công tác du lịch.</li>
+        <li style="list-style: none;">
+            <i>Như vậy, về mặt hình thức, hệ thống quản lý nhà nước về du lịch trên địa bàn huyện Kim Bôi được tổ chức khá hoàn thiện theo đúng quy định hiện hành của pháp luật Việt Nam. </i>
+        </li>
+        <b>1 số tin tức đáng chú ý</b>
+        <ul style="list-style: none; display: flex; justify-content: space-between;">
+            <li style="display: flex;align-items: center;flex-direction: column;justify-content: center;width: 260px; height: 320px; background-color: #fafafa;   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.1);">
+                <iframe width="235" height="206" src="https://www.youtube.com/embed/GetmapH5xzM" title="Công bố quyết định bổ nhiệm giám đốc Sở Văn hóa, Thể thao và Du lịch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p style="font-size: 14px; font-style: italic; margin-left: 10px; margin-top: 20px;">Công bố quyết định bổ nhiệm giám đốc Sở Văn hóa, Thể thao và Du lịch</p>
+            </li>
+            <li style="display: flex;align-items: center;flex-direction: column;justify-content: center;width: 260px; height: 320px; background-color: #fafafa;   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.1);">
+                <iframe width="235" height="206" src="https://www.youtube.com/embed/XDnLUMf5DB8" title="Bản Đồ Quy Hoạch Sử Dụng Đất Huyện Kim Bôi, Hòa Bình Năm 2030 | Bản Đồ Quy Hoạch Được Cập Nhật Mới" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p style="font-size: 14px; font-style: italic; margin-left: 10px; margin-top: 20px;">Bản Đồ Quy Hoạch Sử Dụng Đất Huyện Kim Bôi, Hòa Bình Năm 2030</p>
+            </li>
+            <li style="display: flex;align-items: center;flex-direction: column;justify-content: center;width: 260px; height: 320px; background-color: #fafafa;   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.1);">
+                <iframe width="235" height="206" src="https://www.youtube.com/embed/DlWrtkOk1yc" title="Thủ tướng phát lệnh khởi công đường liên kết vùng ở Hòa Bình - VNEWS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p style="font-size: 14px; font-style: italic; margin-left: 10px; margin-top: 20px;">Thủ tướng phát lệnh khởi công đường liên kết vùng ở Hòa Bình - VNEWS</p>
+            </li>
+            <li style="display: flex;align-items: center;flex-direction: column;justify-content: center;width: 260px; height: 320px; background-color: #fafafa;   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.1);">
+                <iframe width="235" height="206" src="https://www.youtube.com/embed/hjuwQWVPbNw" title="Dự án 109ha - Khu đô thị sinh thái tại Kim Bôi có gì nổi bật?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p style="font-size: 14px; font-style: italic; margin-left: 10px; margin-top: 20px;">Dự án 109ha - Khu đô thị sinh thái tại Kim Bôi có gì nổi bật?</p>
+            </li>
+        </ul>
+    </ul>
+    </div>
+
+    <footer style="margin-top: 30px;">
+      <p>TRẢI NGHIỆM VUI VẺ CÙNG CHÚNG TÔI VỚI NHỮNG ĐỊA ĐIỂM THÚ VỊ</p>
+    </footer>
+    <script src="trang1.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

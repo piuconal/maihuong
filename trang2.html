@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kim Boi Tourism</title>
+    <link rel="stylesheet" href="trang1.css" />
+    <link rel="icon" href="assets/img/logo.png" />
+    <script src="https://kit.fontawesome.com/f0add9272d.js"></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+        <b style="font-size: 40px; color: #fafafa; margin-top: 170px;">ĐỊA ĐIỂM DU LỊCH CHÍNH</b>
+    </header>
+    <!-- List -->
+    <div id="list">
+    <div class="close">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <ul id="menu">
+        <li><a href="trang1.html"><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Sản phẩm du lịch</a></li>
+        <li>
+            <a href=""><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Tổ chức không gian phát triển du lịch</a>
+            <ul>
+                <li><a href="trang2.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Các khu, điểm du lịch chính</a></li>
+                <li><a href="trang3.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Các tour, tuyến du lịch</a></li>
+            </ul>
+        </li>
+
+        <li><a href="trang4.html"><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Đầu tư phát triển du lịch</a></li>
+        <li><a href="trang5.html"><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Quản lý hoạt động du lịch</a></li>
+        <li>
+            <a href=""><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Các điểm tài nguyên du lịch</a>
+            <ul>
+                <li><a href="trang6.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Tài nguyên du lịch tự nhiên</a></li>
+                <li>
+                    <a href="trang7.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Tài nguyên du lịch nhân văn</a>
+                    <ul>
+                        <li><a href="#"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Di tích khảo cổ</a></li>
+                        <li><a href="#"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Lễ hội</a></li>
+                        <li><a href="#"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Ẩm thực</a></li>
+                        <li><a href="#"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Bản sắc văn hóa dân tộc</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <img style="position: absolute; width: 350px; height: 170px;bottom: 0;" src="assets/img/welcome.gif" alt="">
+    </div>
+    <!-- nav -->
+    <nav>
+      <div class="menu">
+        <i class="fa-solid fa-bars" style="color: #fafafa"></i>
+      </div>
+      <div class="logo">
+        <img id="logo" src="/assets/img/logo.png" alt="" />
+      </div>
+      <div class="contact">
+        <div class="lang">
+          <p id="login">Quản lý</p>
+          <div id="overlay"></div>
+          <div id="loginPopup" style="color: black; border-radius: 20px;">
+            <form id="loginForm" method="post">
+              <label for="username">Tài khoản:</label><br>
+              <input style="width: 200px; margin-top: 10px;" type="text" id="username" name="username"><br>
+              <br><label style="margin-top: 20px;" for="pwd">Mật khẩu:</label><br>
+              <input style="width: 200px; margin-top: 10px;" type="password" id="pwd" name="password"><br><br>
+              <button type="submit">Đăng nhập</button>
+              <button type="button" onclick="closeLoginPopup()">Đóng</button>
+            </form>
+          </div>
+          <p>Tiếng Việt</p>
+          <p>English</p>
+          <p>中文</p>
+        </div>
+        <p>Hotline: 1900 1900; ZALO, VIBER (+84)222.666.888</p>
+      </div>
+    </nav>
+
+    <!-- comment -->
+    <div class="comment-icon">
+      <i class="fa-solid fa-comment"></i>
+    </div>
+    <!-- chat -->
+    <div class="popup" id="commentPopup">
+      <!-- Popup content -->
+      <div class="popup-content">
+        <div class="back1">
+          <span class="close-btn">&times;</span>
+          <i>Vui lòng điền thông tin và gửi phản hồi tới chúng tôi</i>
+          <b>Xin chân thành cảm ơn!</b>
+        </div>
+        <div class="back2">
+          <form id="feedbackForm">
+            <div class="form-group">
+              <label for="name">Tên</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="feedback">Đánh giá (góp ý)</label>
+              <textarea id="feedback" name="feedback" required></textarea>
+            </div>
+
+            <button type="submit">
+              <i class="fa-regular fa-paper-plane"></i>
+              <span>Hoàn tất</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="content" style="width: 1200px;">
+      <ul style="line-height: 30px;width: 1200px; display: flex; flex-direction: column;gap: 30px; margin-top: 30px;">
+        <p>Các khu, điểm du lịch chính hiện đang khai thác, thu hút khách du lịch là:</p>
+        <li style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;">
+            *  *  *<b>Serena Resort (xóm Khai Đồi, xã Sào Báy):</b>Là khu nghỉ dưỡng hiện đang thu hút đông khách du lịch nhất tại Kim Bôi. Khách du lịch đến đây chủ yếu từ Hà Nội. Lấy cảm hứng từ thiên nhiên và văn hóa Tây Bắc, Serena Resort Kim Bôi được xây dựng từ các chất liệu gần gũi với nhiên nhiên như mái tranh, nền gỗ, đá, tre trúc mang lại vẻ đẹp mộc mạc và giản dị. Không gian nhà hàng Nón được thiết kế tỉ mỉ, độc đáo thể hiện nét văn hóa truyền thống của dân tộc và vũng là điểm nhấn trong kiến trúc tại đây. Với diện tích 36 ha, Serena Resort bao gồm các hạng mục chính: Khu tắm Onsen, phòng hội nghị, phòng khách, bể bơi, biệt thự, phòng nghỉ, nhà hàng ẩm thực. Các tiện ích và giải trí: khu tắm khoáng Onsen (theo phong cách của Nhật), bể bơi trong nhà và ngoài trời, tennis, spa, Gym, karaoke, khu vui chơi trẻ em trong nhà và ngoài trời, câu cá, đạp xe, cắm trại, team building, sân thể thao, tour tham quan - dã ngoại.
+            <img style="border-radius: 50px;" src="assets/img/7.png" alt="">
+            <i>Serena Resort</i>
+        </li>
+
+        <li style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;">
+            *  *  *<b>Khách sạn công đoàn Việt Nam tại Hòa Bình (Khu du lịch suối khoáng Kim Bôi): </b>Thuộc xóm Mớ Đá, xã Hạ Bì, là khu nghỉ dưỡng tiện nghi và hiện đại đạt tiêu chuẩn chất lượng 3 sao với các hạng mục chính như: Phòng nghỉ; tắm nước khoáng; nhà hàng; hội trường; các dịch vụ thể thao, giải trí, văn hóa văn nghệ: giao lưu lửa trại, sân tennis, sân cầu lông, bóng bàn, bóng đá, khu vui chơi thiếu nhi và nhiều dịch vụ bổ trợ khác… Khu du lịch thu hút nhiều đối tượng khách: doanh nghiệp, người cao tuổi, hộ gia đình,… thuộc các tỉnh thành Hà Nội, Hải Phòng, Quảng Ninh, Hà Nam, Ninh Bình, Thanh Hóa,…
+            <img style="border-radius: 50px;" src="assets/img/8.png" alt="">
+            <i>Khách sạn công đoàn Việt Nam tại Hòa Bình</i>
+        </li>
+
+        <li style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;">
+            *  *  *<b>Khách sạn V'resort(thuộc thôn Kim Đức, xã Vĩnh Tiến)</b>Là khu du lịch sinh thái hấp dẫn nằm trên một thung lũng vẫn còn nguyên sơ, hoang dã, với các hạng mục chính như: khách sạn, nhà sàn, villa, bar, phòng hội thảo, bể bơi khoáng nóng trong nhà và ngoài trời, các dịch vụ thư giãn như jacuzzi, steam, sauna và foot massage..., các khu vui chơi giải trí, thể thao trong nhà và ngoài trời chuyên biệt dành cho người lớn và trẻ em với nhiều hoạt động bổ ích.
+            <img style="border-radius: 50px;" src="assets/img/9.png" alt="">
+            <i>Khách sạn V'resort</i>
+        </li>
+
+        <li style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;">
+            *  *  *<b>An Lạc Ecofarm(thuộc xóm Cốc, xã Vĩnh Đồng)</b>Là mô hình trang trại hữu cơ và trung tâm giáo dục thực nghiệm với các hạng mục chính như khu nghỉ dưỡng, khu làng nghề, khu chăn nuôi, vườn rau hữu cơ, vườn cây ăn quả. An Lạc Ecofarm hiện đang thu hút đông học sinh, sinh viên đến đặc biệt vào ngày cuối tuần.
+            <img style="border-radius: 50px;" src="assets/img/10.png" alt="">
+            <i>Sơ đồ trang trại Ecofarm</i>
+        </li>
+
+        <li style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;">
+            *  *  *<b>Khu du lịch Cửu thác Tú Sơn(thuộc xóm Củ, xã Tú Sơn)</b>Nằm cạnh đường quốc lộ 12B, với diện tích 120ha, bao gồm các hạng mục chính: Khu trung tâm có bể bơi, cầu trượt, khu vui chơi giải trí, khu tắm bùn, bể bơi tắm nắng bốn mùa, Massage Souna, spa…., hội trường, hội nghị, nhà nghỉ biệt thự hoàng tử, nhà nghỉ mini, nhà sàn lớn, dịch vụ ăn uống, có các món ăn đặc sản miền núi tỉnh Hòa Bình, các chương trình văn nghệ đặc sắc, ca múa nhạc dân tộc, đốt lửa trại, có dàn cồng chiêng, múa sạp, uống rượu cần. Khu du lịch thu hút học sinh, sinh viên nhất là vào mùa hè.
+            <img style="border-radius: 50px;" src="assets/img/11.png" alt="">
+            <i>Khu du lịch Cửu thác Tú Sơn</i>
+        </li>
+      </ul>
+    </div>
+
+    <footer style="margin-top: 30px;">
+      <p>TRẢI NGHIỆM VUI VẺ CÙNG CHÚNG TÔI VỚI NHỮNG ĐỊA ĐIỂM THÚ VỊ</p>
+    </footer>
+    <script src="trang1.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

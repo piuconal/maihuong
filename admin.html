@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Quản lý Đánh Giá</h2>
+
+    <table id="evaluationTable">
+      <tr>
+        <th>Tên</th>
+        <th>Email</th>
+        <th>Đánh giá</th>
+      </tr>
+    </table>
+
+    <button
+      style="
+        margin-top: 20px;
+        background-color: rgb(12, 12, 12);
+        border: none;
+        padding: 10px 10px;
+        border-radius: 20px;
+      "
+    >
+      <a
+        href="index.html"
+        style="text-decoration: none; color: rgb(245, 235, 235)"
+        >Quay lại trang chính</a
+      >
+    </button>
+    <script>
+      fetch("https://6597fa35668d248edf23d6de.mockapi.io/Eval")
+        .then((response) => response.json())
+        .then((data) => {
+          populateTable(data);
+        })
+        .catch((error) => console.error("Error:", error));
+
+      function populateTable(evaluations) {
+        var table = document.getElementById("evaluationTable");
+
+        evaluations.forEach(function (evaluation) {
+          var row = table.insertRow(-1);
+          var cell1 = row.insertCell(0);
+          var cell2 = row.insertCell(1);
+          var cell3 = row.insertCell(2);
+
+          cell1.innerHTML = evaluation.Name;
+          cell2.innerHTML = evaluation.Email;
+          cell3.innerHTML = evaluation.Eval;
+        });
+      }
+    </script>
+  </body>
+</html>

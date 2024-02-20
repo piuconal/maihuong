@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kim Boi Tourism</title>
+    <link rel="stylesheet" href="trang1.css" />
+    <link rel="icon" href="assets/img/logo.png" />
+    <script src="https://kit.fontawesome.com/f0add9272d.js"></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+        <b style="font-size: 40px; color: #fafafa; margin-top: 170px;">TÀI NGUYÊN DU LỊCH TỰ NHIÊN</b>
+    </header>
+    <!-- List -->
+    <div id="list">
+    <div class="close">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <ul id="menu">
+        <li><a href="trang1.html"><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Sản phẩm du lịch</a></li>
+        <li>
+            <a href=""><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Tổ chức không gian phát triển du lịch</a>
+            <ul>
+                <li><a href="trang2.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Các khu, điểm du lịch chính</a></li>
+                <li><a href="trang3.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Các tour, tuyến du lịch</a></li>
+            </ul>
+        </li>
+
+        <li><a href="trang4.html"><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Đầu tư phát triển du lịch</a></li>
+        <li><a href="trang5.html"><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Quản lý hoạt động du lịch</a></li>
+        <li>
+            <a href=""><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Các điểm tài nguyên du lịch</a>
+            <ul>
+                <li><a href="trang6.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Tài nguyên du lịch tự nhiên</a></li>
+                <li>
+                    <a href="trang7.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Tài nguyên du lịch nhân văn</a>
+                    <ul>
+                        <li><a href="#"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Di tích khảo cổ</a></li>
+                        <li><a href="#"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Lễ hội</a></li>
+                        <li><a href="#"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Ẩm thực</a></li>
+                        <li><a href="#"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Bản sắc văn hóa dân tộc</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <img style="position: absolute; width: 350px; height: 170px;bottom: 0;" src="assets/img/welcome.gif" alt="">
+    </div>
+    <!-- nav -->
+    <nav>
+      <div class="menu">
+        <i class="fa-solid fa-bars" style="color: #fafafa"></i>
+      </div>
+      <div class="logo">
+        <img id="logo" src="/assets/img/logo.png" alt="" />
+      </div>
+      <div class="contact">
+        <div class="lang">
+          <p id="login">Quản lý</p>
+          <div id="overlay"></div>
+          <div id="loginPopup" style="color: black; border-radius: 20px;">
+            <form id="loginForm" method="post">
+              <label for="username">Tài khoản:</label><br>
+              <input style="width: 200px; margin-top: 10px;" type="text" id="username" name="username"><br>
+              <br><label style="margin-top: 20px;" for="pwd">Mật khẩu:</label><br>
+              <input style="width: 200px; margin-top: 10px;" type="password" id="pwd" name="password"><br><br>
+              <button type="submit">Đăng nhập</button>
+              <button type="button" onclick="closeLoginPopup()">Đóng</button>
+            </form>
+          </div>
+          <p>Tiếng Việt</p>
+          <p>English</p>
+          <p>中文</p>
+        </div>
+        <p>Hotline: 1900 1900; ZALO, VIBER (+84)222.666.888</p>
+      </div>
+    </nav>
+
+    <!-- comment -->
+    <div class="comment-icon">
+      <i class="fa-solid fa-comment"></i>
+    </div>
+    <!-- chat -->
+    <div class="popup" id="commentPopup">
+      <!-- Popup content -->
+      <div class="popup-content">
+        <div class="back1">
+          <span class="close-btn">&times;</span>
+          <i>Vui lòng điền thông tin và gửi phản hồi tới chúng tôi</i>
+          <b>Xin chân thành cảm ơn!</b>
+        </div>
+        <div class="back2">
+          <form id="feedbackForm">
+            <div class="form-group">
+              <label for="name">Tên</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="feedback">Đánh giá (góp ý)</label>
+              <textarea id="feedback" name="feedback" required></textarea>
+            </div>
+
+            <button type="submit">
+              <i class="fa-regular fa-paper-plane"></i>
+              <span>Hoàn tất</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="content" style="width: 1200px;">
+        <ul style="line-height: 30px;width: 1200px; display: flex; flex-direction: column;gap: 40px; margin-top: 30px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            <p>Tài nguyên du lịch tự nhiên trên địa bàn huyện khá đa dạng, phong phú với hệ thống các hang động, những dãy núi đá vôi, thác nước, khu rừng nguyên sinh, thung lũng,… Một số điểm tài nguyên chính có tiềm năng phát triển du lịch như:</p>
+            <ul style="display: flex; flex-direction: column; gap: 70px;">
+                <li style="display: flex; align-items: center;gap: 50px;">
+                    <img style="width: 400px; height: 400px; border-radius: 50%;" src="assets/img/x1.png" alt="">
+                    <p><b>-> Suối khoáng Kim Bôi</b>: Suối khoáng Kim Bôi thuộc xóm Mớ Đá, xã Hạ Bì, khoáng được xuất lộ ra từ vỉa đá vôi có tuổi địa chất khoảng 250 triệu năm, khi lộ thiên nước có nhiệt độ 34 - 360C, được đánh giá là suối khoáng có thành phần hóa học ổn định nhất. Qua kiểm nghiệm, nguồn nước khoáng Kim Bôi là điều kiện lý tưởng để phục hồi sức khỏe. Nước suối Kim Bôi đã được đóng chai làm nước giải khát. Nguồn khoáng nóng phun lên từ độ sâu 175,5 m và được bơm dẫn trực tiếp vào các bể tắm phục vụ du khách, nơi đây đã được khai thác du lịch sinh thái, nghỉ dưỡng, chữa bệnh...</p>
+                </li>
+
+                <li style="display: flex; align-items: center;gap: 50px;">
+                    <img style="width: 400px; height: 400px; border-radius: 50%;" src="assets/img/x3.png" alt="">
+                    <p><b>-> Cửu thác Tú Sơn</b>: Thuộc xóm Củ, xã Tú Sơn, có 9 dòng thác (thác Tiên Tắm, thác tình Âu Cơ, thác Trải Chiếu Quan Lang, Thác nàng Út Lót, Thác Bạc, Thác Triệu Phu, Tháng Thượng Ngàn, Thác Mẫu, Thác Thiên Ngọc Thạch) với 9 vẻ đẹp khác nhau cùng với sự phong phú, đa dạng địa hình, địa vật tạo nên một địa điểm vui chơi thú vị, ngọn thác cuối cùng nằm tại độ cao 1.300m là ngọn thác đẹp nhất và được ví như “Vườn thượng uyển”. Với khí hậu mát mẻ, nhiên thiên hùng vĩ, cửu thác Tú Sơn có thể khai thác du lịch sinh thái, nghỉ dưỡng cuối tuần, du lịch leo núi, khám phá…</p>
+                </li>
+
+                <li style="display: flex; align-items: center;gap: 50px;">
+                    <p><b>-> Thác Mặt trời</b>: Thuộc xóm Vó Khang, xã Kim Tiến, nơi đây được mệnh danh là chốn bồng lai tiên cảnh bởi mây phủ quanh năm, dòng suối uốn lượn hiền hòa, không khí se lạnh, thác tung bọt trắng xóa và đặc biệt còn rất hoang sơ, chưa có bất kỳ một dịch vụ nào phục vụ du khách, con đường dẫn tới thác phải men theo đường mòn hoặc đi đường suối trèo qua các phiến đá lớn nhỏ. Thác Mặt trời là thác chính, cao ở lưng chừng núi Thung. Ngoài ra còn có thác 1, thác 2, để đi hết ba tầng thác này phải mất hai ngày đi bộ đường rừng và leo suối. Ngoài thác Mặt Trời ở đây còn có suối tình nhân, thung lũng mộng mơ, hang tình yêu, rừng nguyên sinh với hàng ngàn động vật hoang dã. Đến đây, du khách không chỉ được leo thác, khđiểm mới đang xây dựng hoặc mới đưa vào khai tháckhám phá thiên nhiên mà còn được tìm hiểu văn hóa bản địa, thưởng thức ẩm thực xứ Mường Động như: gà đồi, măng nứa, xôi ngũ sắc, cá suối, rau muống luộc… Thác Mặt trời có thể phát triển thành một khu du lịch đặc thù về loại hình du lịch dã ngoại, khám phá thiên nhiên, tìm hiểu nét văn hóa của dân tộc Mường.</p>
+                    <img style="width: 400px; height: 400px; border-radius: 50%;" src="assets/img/x4.jpg" alt="">
+                </li>
+
+                <li style="display: flex; align-items: center;gap: 50px;">
+                    <img style="width: 400px; height: 400px; border-radius: 50%;" src="assets/img/x5.png" alt="">
+                    <p><b>-> Thung Rếch</b>: Thuộc xóm Thung Rếch, xã Tú Sơn, rộng trên 1.300 ha có thung lũng rộng 629 ha, xung quanh là đồi núi và hệ thống hang động đẹp có nhiều mô hình trồng trọt cây ăn quả, cây công nghiệp, cây lương thực, trồng rừng và chăn nuôi gia súc, gia cầm đặc biệt là các loại động vật đặc sản như lợn rừng, nhím, gà gô… khí hậu trong lành có thể ví như một Đà Lạt thu nhỏ. Trước đây vùng đất này vốn chỉ có đồng bào Mường sinh sống. Kể từ sau khi dâng nước lòng hồ Sông Đà, bà con người Dao, người Mường chuyển về đây sinh sống và tạo nên sự đa dạng về văn hóa, khiến cho vẻ đẹp Thung Rếch càng sinh động thêm. Nơi đây rất thích hợp phát triển du lịch sinh thái, tìm hiểu bản sắc văn hóa dân tộc Mường, Dao.</p>
+                </li>
+
+                <li style="display: flex; align-items: center;gap: 50px;">
+                    <p><b>-> Khu bảo tồn thiên nhiên Thượng Tiến</b>: Thuộc phạm vi 3 xã Thượng Tiến, Kim Tiến của huyện Kim Bôi và xã Quý Hòa của huyện Lạc Sơn. Khu bảo tồn thiên nhiên Thượng Tiến là một trong các Khu bảo tồn được thành lập đầu tiên ở Việt Nam cũng như ở tỉnh Hòa Bình. Thượng Tiến nằm ở cửa ngõ của vùng sinh thái Tây - Bắc Việt Nam nơi có nhiều hệ sinh thái đặc biệt và cũng là những vùng phân bố quan trọng của nhiều loài động, thực vật quan trọng của Việt Nam và của bán đảo Đông Dương. Về động vật, cho đến thời điểm hiện tại tổng số 59 loài thú, 128 loài chim, 18 loài bò sát, 35 loài ếch nhái đã được ghi nhận trong KBT. Trong đó, có khoảng 80 loài động vật có tên trong Nghị định 32/2006/NĐ-CP, trong Sách Đỏ Việt Nam (2007) và Danh lục đỏ IUCN (2011). Về thực vật, tổng số có 648 loài thuộc 397 chi, 144 họ, 4 ngành thực vật bậc cao có mạch, trong đó có 39 loài có tên trong Nghị định 32/2006/NĐ-CP, trong Sách Đỏ Việt Nam (2007) và Danh lục đỏ IUCN (2011). Với tính đa dạng sinh học cao, Khu bảo tồn thiên nhiên Thượng Tiến đóng vai trò vô cùng quan trọng trong chiến lược bảo tồn đa dạng sinh học của quốc gia, khu vực và quốc tế. Nơi đây rất thích hợp để phát triển du lịch sinh thái, nghiên cứu khoa học, …</p>
+                    <img style="width: 400px; height: 400px; border-radius: 50%;" src="assets/img/x6.png" alt="">
+                </li>
+            </ul>
+        </ul>
+    </div>
+
+    <footer style="margin-top: 30px;">
+      <p>TRẢI NGHIỆM VUI VẺ CÙNG CHÚNG TÔI VỚI NHỮNG ĐỊA ĐIỂM THÚ VỊ</p>
+    </footer>
+    <script src="trang1.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

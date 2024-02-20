@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kim Boi Tourism</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/img/logo.png" />
+    <script src="https://kit.fontawesome.com/f0add9272d.js"></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="slideshow-container">
+        <div class="slide">
+          <img src="/assets/img/background.jpg" alt="Image 1" />
+        </div>
+        <div class="slide">
+          <img src="/assets/img/slide1.jpg" alt="Image 2" />
+        </div>
+        <div class="slide">
+          <img src="/assets/img/slide2.jpg" alt="Image 3" />
+        </div>
+        <div class="slide">
+          <img src="/assets/img/slide3.jpg" alt="Image 4" />
+        </div>
+      </div>
+
+      <div class="slide-poi">
+        <div class="poi active">
+          <div class="check"></div>
+        </div>
+        <div class="poi">
+          <div class="check"></div>
+        </div>
+        <div class="poi">
+          <div class="check"></div>
+        </div>
+        <div class="poi">
+          <div class="check"></div>
+        </div>
+      </div>
+
+      <div class="black-overlay"></div>
+
+      <!-- List -->
+      <div id="list">
+        <div class="close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <ul id="menu">
+            <li><a href="trang1.html"><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Sản phẩm du lịch</a></li>
+            <li>
+                <a href=""><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Tổ chức không gian phát triển du lịch</a>
+                <ul>
+                    <li><a href="trang2.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Các khu, điểm du lịch chính</a></li>
+                    <li><a href="trang3.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Các tour, tuyến du lịch</a></li>
+                </ul>
+            </li>
+
+            <li><a href="trang4.html"><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Đầu tư phát triển du lịch</a></li>
+            <li><a href="trang5.html"><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Quản lý hoạt động du lịch</a></li>
+            <li>
+                <a href=""><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Các điểm tài nguyên du lịch</a>
+                <ul>
+                    <li><a href="trang6.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Tài nguyên du lịch tự nhiên</a></li>
+                    <li>
+                        <a href="trang7.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Tài nguyên du lịch nhân văn</a>
+                        <ul>
+                            <li><a href="#"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Di tích khảo cổ</a></li>
+                            <li><a href="#"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Lễ hội</a></li>
+                            <li><a href="#"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Ẩm thực</a></li>
+                            <li><a href="#"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Bản sắc văn hóa dân tộc</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <img style="position: absolute; width: 350px; height: 170px;bottom: 0;" src="assets/img/welcome.gif" alt="">
+      </div>
+    </header>
+
+    <!-- nav -->
+    <nav>
+      <div class="menu">
+        <i class="fa-solid fa-bars" style="color: #fafafa"></i>
+      </div>
+      <div class="logo">
+        <img src="/assets/img/logo.png" alt="" />
+      </div>
+      <div class="contact">
+        <div class="lang">
+          <!-- datve -->
+          <button style="height: 30px; padding: 0 16px;" onclick="showBookingForm()">
+            <span style="font-size: 12px; font-weight: bold;">ĐẶT VÉ THAM QUAN</span>
+          </button>
+
+          <div id="bookingForm">
+            <b id="dongdatve" onclick="hiddenBookingForm()" style="position: absolute; right: 20px; top: 15px; background-color: black; color: #fafafa; padding: 3px 7px; border-radius: 50%;">x</b>
+            <form>
+              <h1 style="text-align: center; margin-bottom: 20px;">ĐẶT VÉ THAM QUAN</h1>
+              
+              <div class="personal-info" style="margin-bottom: 20px;">
+                <label for="fullName">Họ và tên:</label>
+                <input type="text" id="fullName" style="height: 30px; width: 200px; margin-left: 25px;">
+              </div>
+              
+              <div class="personal-info" style="margin-bottom: 20px;">
+                <label for="phoneNumber">Số điện thoại:</label>
+                <input type="tel" id="phoneNumber" style="height: 30px; width: 200px;">
+              </div>
+              
+              <p style="background-color: antiquewhite; height: 25px; display: flex; align-items: center; margin-bottom: 20px;">THÔNG TIN ĐẶT VÉ</p>
+
+              <div class="ticket-type" style="float: left; margin-right: 100px;">
+                <label for="adultQuantity">Người lớn:</label>
+                <h5 style="margin-bottom: 5px; font-weight: 100; font-style: italic; font-size: 12px;">120.000đ/ người(> 1m3)</h5>
+                <input style="width: 40px;" type="number" id="adultQuantity" min="0" value="0" oninput="calculateTicketPrice()">
+              </div>
+              <div class="ticket-type" style="margin-bottom: 20px;">
+                <label for="childQuantity">Trẻ con:</label>
+                <h5 style="margin-bottom: 5px; font-weight: 100; font-style: italic; font-size: 12px;">50.000đ/ người(< 1m3)</h5>
+                <input style="width: 40px;" type="number" id="childQuantity" min="0" value="0" oninput="calculateTicketPrice()">
+              </div>
+            
+              <div class="place" style="margin-bottom: 20px;">
+                <label for="destination">Địa điểm tham quan:</label>
+                <select id="destination" style="height: 30px;">
+                  <option value="destination1">Cửu Thác Tú Sơn</option>
+                  <option value="destination2">Thác Mặt trời</option>
+                  <option value="destination3">An Lạc Ecofarm</option>
+                  <option value="destination4">Khu mộ cổ Đống Thếch</option>
+                  <option value="destination5">Thung Rếch</option>
+                </select>
+              </div>
+            
+              <div class="time" style="margin-bottom: 20px; display: flex; align-items: center; gap: 12px;">
+                <label>Thời gian THAM quan:</label>
+                <input style="margin-top: 0.5px;" type="radio" id="morning" name="time" value="morning">
+                <label for="morning">Sáng</label>
+            
+                <input style="margin-top: 0.5px;" type="radio" id="afternoon" name="time" value="afternoon">
+                <label for="afternoon">Chiều</label>
+            
+                <input style="margin-top: 0.5px;" type="radio" id="evening" name="time" value="evening">
+                <label for="evening">Tối</label>
+              </div>
+            
+              <div class="accommodation" style="margin-bottom: 20px;">
+                <label for="stay">Nơi nghỉ:</label>
+                <select id="stay" style="height: 30px;">
+                  <!-- Add your accommodation options here -->
+                  <option value="hotel1">Khách sạn Công đoàn</option>
+                  <option value="hotel2">Serena Resort</option>
+                  <option value="hotel3">V'Resort</option>
+                  <option value="hotel4">Khác</option>
+                </select>
+                <i style="font-size: 12px; margin-left: 20px;">(Không bao gồm giá phòng nghỉ)</i>
+              </div>
+            
+              <div class="total-price">
+                <label for="price" style="font-size: 30px; margin-right: 10px;">
+                  <b>Giá vé:</b>
+                </label>
+                <span id="ticketPrice" style="font-size: 30px;">0 VNĐ</span>
+              </div>
+            
+              <button type="submit" style="width: 445px; height: 37px;">Đặt vé</button>
+            </form>
+          </div>
+          <!-- enddv -->
+
+          <p id="login">Quản lý</p>
+          <div id="overlay"></div>
+          <div id="loginPopup" style="color: black; border-radius: 20px;">
+            <form id="loginForm" method="post">
+              <label for="username">Tài khoản:</label><br>
+              <input style="width: 200px; margin-top: 10px;" type="text" id="username" name="username"><br>
+              <br><label style="margin-top: 20px;" for="pwd">Mật khẩu:</label><br>
+              <input style="width: 200px; margin-top: 10px;" type="password" id="pwd" name="password"><br><br>
+              <button type="submit">Đăng nhập</button>
+              <button type="button" onclick="closeLoginPopup()">Đóng</button>
+            </form>
+          </div>
+          <p>Tiếng Việt</p>
+          <p>English</p>
+          <p>中文</p>
+        </div>
+        <p>Hotline: 1900 1900; ZALO, VIBER (+84)222.666.888</p>
+      </div>
+    </nav>
+
+    <!-- comment -->
+    <div class="comment-icon">
+      <i class="fa-solid fa-comment"></i>
+    </div>
+    <!-- chat -->
+    <div class="popup" id="commentPopup">
+      <!-- Popup content -->
+      <div class="popup-content">
+        <div class="back1">
+          <span class="close-btn">&times;</span>
+          <i>Vui lòng điền thông tin và gửi phản hồi tới chúng tôi</i>
+          <b>Xin chân thành cảm ơn!</b>
+        </div>
+        <div class="back2">
+          <form id="feedbackForm">
+            <div class="form-group">
+              <label for="name">Tên</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="feedback">Đánh giá (góp ý)</label>
+              <textarea id="feedback" name="feedback" required></textarea>
+            </div>
+
+            <button type="submit">
+              <i class="fa-regular fa-paper-plane"></i>
+              <span>Hoàn tất</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <ul style="width: 890px; display: flex; flex-direction: column; margin-top: 20px; gap: 20px; list-style: none;">
+        <li>
+          <ul style="list-style: none; display: flex; flex-direction: column">
+            <li style="margin-top: 20px;display: flex; flex-direction: column; width: 890px; gap: 10px;">
+              <img style="width: 550px; height: 300px;" src="assets/img/ks.jpg" alt="">
+              <i style="font-size: 14px;">Khách sạn Công đoàn Việt Nam</i>
+            </li>
+            <li style="display: flex; flex-direction: column; width: 890px; align-items: end; gap: 10px">
+              <img style="width: 550px; height: 300px;" src="assets/img/ks2.jpg" alt="">
+              <i style="font-size: 14px;">Serena Resort</i>
+            </li>
+            <li style="display: flex; flex-direction: column; width: 890px; gap: 10px;">
+              <img style="width: 550px; height: 300px;" src="assets/img/ks1.jpg" alt="">
+              <i style="font-size: 14px;">Khách sạn V'Resort</i>
+            </li>
+          </ul>
+        </li>
+        <li class="ct2" style="width: 890px; display: flex; flex-direction: column; align-items: center; gap: 50px;">
+            <img src="assets/img/ks4.jpg" alt="First Image">
+            <i>Cửu Thác Tú Sơn</i>
+            <img src="assets/img/ks5.jpg" alt="Second Image">
+            <i>Thác Mặt trời</i>
+            <img src="assets/img/ks6.jpg" alt="Third Image">
+            <i>Thung Rếch</i>
+            <img src="assets/img/ks7.jpg" alt="Third Image">
+            <i>An Lạc Ecofarm</i>
+        </li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>TRẢI NGHIỆM VUI VẺ CÙNG CHÚNG TÔI VỚI NHỮNG ĐỊA ĐIỂM THÚ VỊ</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kim Boi Tourism</title>
+    <link rel="stylesheet" href="trang1.css" />
+    <link rel="icon" href="assets/img/logo.png" />
+    <script src="https://kit.fontawesome.com/f0add9272d.js"></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+        <b style="font-size: 40px; color: #fafafa; margin-top: 170px;">TÀI NGUYÊN DU LỊCH NHÂN VĂN</b>
+    </header>
+    <!-- List -->
+    <div id="list">
+    <div class="close">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <ul id="menu">
+        <li><a href="trang1.html"><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Sản phẩm du lịch</a></li>
+        <li>
+            <a href=""><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Tổ chức không gian phát triển du lịch</a>
+            <ul>
+                <li><a href="trang2.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Các khu, điểm du lịch chính</a></li>
+                <li><a href="trang3.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Các tour, tuyến du lịch</a></li>
+            </ul>
+        </li>
+
+        <li><a href="trang4.html"><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Đầu tư phát triển du lịch</a></li>
+        <li><a href="trang5.html"><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Quản lý hoạt động du lịch</a></li>
+        <li>
+            <a href=""><i class="fa-solid fa-arrow-right" style="color: rgb(241, 245, 130);"></i> Các điểm tài nguyên du lịch</a>
+            <ul>
+                <li><a href="trang6.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Tài nguyên du lịch tự nhiên</a></li>
+                <li>
+                    <a href="trang7.html"><i class="fa-solid fa-pen-fancy" style="color: rgb(241, 245, 130);"></i> Tài nguyên du lịch nhân văn</a>
+                    <ul>
+                        <li><p onclick="scrollToSection('archaeological-sites')"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Di tích khảo cổ</p></li>
+                        <li><p onclick="scrollToSection('archaeological-sites1')"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Lễ hội</p></li>
+                        <li><p onclick="scrollToSection('archaeological-sites2')"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Ẩm thực</p></li>
+                        <li><p onclick="scrollToSection('archaeological-sites3')"><i class="fa-regular fa-star" style="color: rgb(241, 245, 130);"></i> Bản sắc văn hóa dân tộc</p></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <img style="position: absolute; width: 350px; height: 170px;bottom: 0;" src="assets/img/welcome.gif" alt="">
+    </div>
+    <!-- nav -->
+    <nav>
+      <div class="menu">
+        <i class="fa-solid fa-bars" style="color: #fafafa"></i>
+      </div>
+      <div class="logo">
+        <img id="logo" src="/assets/img/logo.png" alt="" />
+      </div>
+      <div class="contact">
+        <div class="lang">
+          <p id="login">Quản lý</p>
+          <div id="overlay"></div>
+          <div id="loginPopup" style="color: black; border-radius: 20px;">
+            <form id="loginForm" method="post">
+              <label for="username">Tài khoản:</label><br>
+              <input style="width: 200px; margin-top: 10px;" type="text" id="username" name="username"><br>
+              <br><label style="margin-top: 20px;" for="pwd">Mật khẩu:</label><br>
+              <input style="width: 200px; margin-top: 10px;" type="password" id="pwd" name="password"><br><br>
+              <button type="submit">Đăng nhập</button>
+              <button type="button" onclick="closeLoginPopup()">Đóng</button>
+            </form>
+          </div>
+          <p>Tiếng Việt</p>
+          <p>English</p>
+          <p>中文</p>
+        </div>
+        <p>Hotline: 1900 1900; ZALO, VIBER (+84)222.666.888</p>
+      </div>
+    </nav>
+
+    <!-- comment -->
+    <div class="comment-icon">
+      <i class="fa-solid fa-comment"></i>
+    </div>
+    <!-- chat -->
+    <div class="popup" id="commentPopup">
+      <!-- Popup content -->
+      <div class="popup-content">
+        <div class="back1">
+          <span class="close-btn">&times;</span>
+          <i>Vui lòng điền thông tin và gửi phản hồi tới chúng tôi</i>
+          <b>Xin chân thành cảm ơn!</b>
+        </div>
+        <div class="back2">
+          <form id="feedbackForm">
+            <div class="form-group">
+              <label for="name">Tên</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="feedback">Đánh giá (góp ý)</label>
+              <textarea id="feedback" name="feedback" required></textarea>
+            </div>
+
+            <button type="submit">
+              <i class="fa-regular fa-paper-plane"></i>
+              <span>Hoàn tất</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="content" style="width: 1200px;">
+        <ul style="line-height: 30px;width: 1200px; display: flex; flex-direction: column;gap: 40px; margin-top: 30px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            <i>Kim Bôi cũng là vùng đất nổi tiếng về văn hóa dân gian, lễ hội truyền thống, Chiêng Mường mang đậm nét bản sắc văn hóa dân tộc Việt Mường.</i>
+            <div style="line-height: 35px;display: flex; flex-direction: column; align-items: center; gap: 50px;">
+                <b id="archaeological-sites" style="color: red; font-size: 40px;">DI TÍCH KHẢO CỔ</b>
+                <p>Khu mộ cổ Đống Thếch thuộc xóm Chiềng, xã Vĩnh Đồng, có từ nửa cuối thế kỷ 17 thời Lê với hàng ngàn cột đá lớn, nhỏ được khắc chữ Hán - Nôm. Những cột đá tảng, cái cao lênh khênh, cái thấp lè tè, tròn hoặc dẹt cắm quanh những ngôi mộ. Trước đây khu này rất rộng với hàng trăm ngôi mộ và hàng ngàn cột đá xanh được chôn xung quanh mỗi mộ giống như một rừng đá. Những cột đá xanh được lấy từ Thanh Hóa, cột đá to nhất có chiều rộng hơn 1m, cao khoảng 4m. Tất cả được dựng theo hình tròn có quy luật, ẩn dưới mỗi nấm mộ là những đồ tùy táng có giá trị khảo cổ… Phía đầu mộ chôn ba khối đá cao to nhất thành một hàng, phía chân mộ chôn ba khối nhỏ hơn, thấp hơn đối xứng với đầu mộ</p>
+                <div style="display: flex; gap: 20px;">
+                    <img style="width: 550px; height: 400px; border-radius: 20px;" src="assets/img/y1.png" alt="">
+                    <img style="width: 550px; height: 400px; border-radius: 20px;" src="assets/img/y2.png" alt="">
+                </div>
+                <p>Khu đống thếch có địa thế hình dáng miệng rồng, một thế đất quý theo thuật phong thủy của người xưa cho nên từ lâu đời dòng họ Đinh ở Mường động đã độc chiếm làm nghĩa địa cho riêng mình. Lật giở kho sử người Mường, người có công dựng nên xứ Mường Động là ông Đinh Văn Cương, người vùng Ngọc Lặc, Thanh Hóa. Do có công với triều đình nên ông đã được vua Lê, chúa Trịnh phong tước, đổi thành họ Đinh Công, cho cai quản xứ Mường Động, một trong những phên dậu phía tây bảo vệ kinh thành Thăng Long. Nổi bật trong dòng họ Đinh có Đinh Công Kỷ, một vị tướng giỏi của vua Lê, được phong tước quận công. Để con cháu đời sau không quên công đức, dòng họ danh giá này đã xây dựng mộ đá để mong tên tuổi các vị sẽ trường tồn cùng tuế nguyệt. Khu mộ cổ được chia làm hai khu, khu một là khu mộ của dòng họ Đinh là dòng họ lớn có thế lực ở huyện Kim Bôi có công lớn với triều Lê (Lê Trung Hưng) được cắt đất cai quản theo hình thức thế tộc, được hưởng quyền tập phong, khu hai là khu dành cho thân tộc của Uy lộc hầu (Đinh Công Kỷ) Thổ tù cai quản khu vực phía Bắc huyện Kim Bôi ngày nay. Năm 1997, khu mộ Đống Thếch được công nhận là di tích lịch sử khảo cổ cấp quốc gia. Các nhà khảo cổ học đã phát hiện rất nhiều hiện vật dưới mộ, đáng chú ý, những chiếc trống đồng loại nhỏ có niên đại từ thế kỷ 2-12 cùng nhiều đồ gốm sứ có xuất xứ từ các nước Nhật Bản,Trung Quốc có niên đạ từ thế kỷ 11-16. Điều này đã khẳng định sự giao lưu, buôn bán của người Mường Động đã phát triển thịnh vượng và mở rộng giao thương với nhiều nước trong khu vực.</p>
+                <iframe width="935" height="526" src="https://www.youtube.com/embed/PmrhrukqmzU" title="Kinh hoàng khu mộ đá khổng lồ thường xuyên bị sét đánh ở Hòa Bình - Mộ cổ Đống Thếch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                
+                <b id="archaeological-sites1" style="color: red; font-size: 40px;">LỄ HỘI</b>
+                <p>Huyện Kim Bôi có nhiều dân tộc cùng sinh sống, trong năm mỗi vùng có nhiều lễ hội mang đậm bản sắc văn hóa dân tộc Mường, Dao, Thái, Tày, Hoa…với nhiều lễ hội như: Hội xuân, Lễ Khuống mùa, Dộng chùa, Lễ Hạ điền, Lễ Mừng cơm mới, Lễ mở cửa rừng, Hội đọc mong (săn thú), Hội đánh cá, Tết nhảy, Cấp sắc…và các trò chơi dân gian mang tính cộng đồng cao như tung còn, đánh mảng, đánh đuốn (quay), đánh khăng, cò le, đánh chó, buôn chó, chằm chỉ chằm chăn, chơi đu, thi đi cà kheo, kéo co, đẩy gậy, bắn nỏ, bói hoa, gọi nàng khọt...vẫn duy trì thường xuyên và một số trò chơi, lễ, hội đang được phục dựng, đặc biệt một số lễ hội thu hút đông đảo dân cư địa phương như:</p>
+                <ul style="list-style: none;display: flex; flex-direction: column; gap: 30px;">
+                    <li>•	Lễ hội Mường Động (Chiềng Động) xóm Chiềng, xã Vĩnh Đồng: Tổ chức ngày 07 - 08 tháng giêng âm lịch. Lễ hội diễn ra nhằm tưởng nhớ công đức của Vua cha, Vua Bà, Vua Con( tức hai vợ chồng Vua Hùng và con trai Vua hùng),  ông Đinh Công Chinh - Thành hoàng làng. Lễ hội được tổ chức tại tại Chùa Động và Đình Động. Chùa Động xưa được đặt tại khu vực đỉnh đồi thuộc đất xóm Chiềng xã Vĩnh Đồng, hiện nay được chuyển xuống chân đồi thuộc vị trí phía Đông Nam của di tích mộ cổ Đống Thếch, xóm Chiềng, xã Vĩnh Đồng. Đình Động được đặt tại địa điểm Xóm Chiềng - xã Vĩnh Đồng một thời gian dài được trưng dụng xây dựng lại làm trụ sở UBND xã và hiện nay đã được sử chữa và hoạt động lại. </li>
+                    <iframe style="margin-left: 150px;" width="935" height="526" src="https://www.youtube.com/embed/FACkKuG2-GQ" title="Lễ Hội Mường Động Hòa Bình - Flycam 4k (Vietnamese Muong Festival)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+                    <li>•	Lễ Khuống mùa tại Miếu Khụ Động xóm Chanh, xã Vĩnh Đồng được tổ chức vào ngày 07 tháng 3 âm lịch.</li>
+                    <iframe style="margin-left: 150px;" width="935" height="526" src="https://www.youtube.com/embed/hbnYVJsfZxg" title="LỄ HỘI KHUỐNG MÙA CỦA NGƯỜI MƯỜNG HÒA BÌNH" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <li>•	Hội chùa Sim xã Hợp Đồng được tổ chức vào ngày 14 - 15 tháng giêng âm lịch.</li>
+                    <li>•	Hội Cơm thi và chọi trâu bò xóm Khả, xã Bắc Sơn được tổ chức vào ngày 04 - 06 tháng giêng âm lịch.</li>
+                    <li>•	Lễ hội xuống đồng (5/4 âm lịch hàng năm).</li>
+                </ul>
+                
+                <b id="archaeological-sites2" style="color: red; font-size: 40px;">ẨM THỰC</b>
+                <p>Với đặc trưng là một huyện có địa hình nhiều đồi núi, dân cư chiếm đa phần là dân tộc Mường, do đó đặc trưng ẩm thực tại đây là ẩm thực dân tộc Mường: Văn hóa ẩm thực của người Mường được tạo nên từ những món ăn đơn giản, dân dã mang hương vị của núi rừng, sông suối. Điều đặc biệt nhất trong văn hóa ẩm thực người Mường là sử dụng lá chuối để bày các món ăn (cỗ lá), cỗ lá trở thành thương hiệu riêng của người Mường.</p>
+                <ul style="list-style: none;display: flex; flex-direction: column; gap: 30px;">
+                    <li>•	Về ẩm thực có cơm lam, nếp nương, nếp cẩm, thịt gà nấu măng chua hạt dổi, thịt trâu lá chua (lá lồm), cá ốt (gói) đồ (hấp), cá chua, thịt chua các món chế biến từ các sản phẩm của rừng, sông, suối…các loại bánh chay, bánh hèm (nhân), bánh trôi, bánh nẳng, bánh uôi, bánh rán... và đồ uống như rượu xả, cơm đe (rượu cái), rượu cần, đặc biệt là nguồn nước khoáng có thể uống ngay tại mỏ nước khoáng ở xóm Mớ Đá xã Hạ Bì,...  </li>
+                    <img src="assets/img/z.png" alt="">
+                    <li>•	Cây nông nghiệp: Nhãn (xã Sơn Thủy) đã được Cục Sở hữu trí tuệ cấp giấy chứng nhận đăng ký nhãn hiệu số 264837 ngày 27/6/2016 và có 31 hộ thành viên được phép sử dụng nhãn hiệu tập thể nhãn Sơn Thủy, cây có múi (cam, quýt, bưởi) (Tú Sơn, Đú Sáng, Vĩnh Tiến,…), rau an toàn và cây đặc sản khác (Đú Sáng, Vĩnh Đồng, Hạ Bì, Thượng Bì, Hợp Kim, Nam Thượng,…) và nhiều cánh đồng lúa có cảnh quan đẹp ở các xã như Hợp Đồng, Hợp Kim, Kim Bôi, Nam Thượng,…</li>
+                    <div style="display: flex; gap: 20px; justify-content: center;">
+                        <img style="width: 500px; height: 350px;" src="assets/img/j.png" alt="">
+                        <img style="width: 500px; height: 350px;" src="assets/img/k.png" alt="">
+                    </div>
+                </ul>
+                <b id="archaeological-sites3" style="color: red; font-size: 40px;">BẢN SẮC VĂN HÓA DÂN TỘC</b>
+                <p>Với dân số khoảng 117,8 nghìn người, trong đó dân tộc Mường chiếm đa số khoảng 83% dân số toàn huyện, còn lại là dân tộc Kinh, Dao. Mỗi dân tộc đều có nền văn hóa đa dạng, mang đậm bản sắc riêng của từng dân tộc. Trong đó, dân tộc Mường chiếm đa số, là dân tộc bản địa gắn liền với văn hóa Hòa Bình ra đời cách đây hàng nghìn năm. Dân tộc Mường với những nét văn hóa truyền thống như: văn hóa Chiêng Mường, văn hóa "cơm đồ, nhà gác, nước vác, lợn thui, ngày lui tháng tới" với lễ hội, trang phục, nhà ở, phong tục tập quán, âm nhạc,… là điều kiện thuận lợi để phát triển du lịch văn hóa, cộng đồng.</p>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 30px;">
+                    <li>•	Âm nhạc có nhiều làn điệu cổ, dân gian, nhiều bài, nhiều phong cách trình diễn nhạc cụ đặc sắc như hoà tấu cồng chiêng xéc bùa, cò ke ống sáo (các bài nhị sáo truyền thống)... các thể loại ca như hát đối đáp trai gái, ví đúm, rằng thường, bộ mẹng, kể truyện thơ...các loại nhạc cụ  tiêu biểu như trống đồng, trống da, trống đất, sáo dọc, sáo ngang, sáo ôi, kèn, bỉ ôi, nhị, tam, xinh tiền… và các điệu múa đặc trưng như  múa bông, múa dâng hoa, múa cửa đình, múa nghi lễ, múa tín ngưỡng…</li>
+                    <iframe style="margin-left: 200px;" width="801" height="526" src="https://www.youtube.com/embed/ONkXJnLcbNc" title="Nhạc dân tộc Mường , ( Cò ke ốong kháo ) full HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <li>•	Trang phục, nhà ở: Những bộ trang phục với họa tiết giản dị, nhưng không kém đi sự tinh tế, đặc biệt là những nét hoa văn trên cạp váy đã tôn lên vẻ đẹp của người phụ nữ. Nhà ở của người dân bản địa là những ngôi nhà sàn lớn, mộc mạc, mái tranh hay lợp lá cọ, lợp ngói, ẩn khá kín dưới màu xanh của cây cối trồng quanh nhà.</li>
+                </ul>
+
+                <p>Phong tục tập quán: Đám cưới cổ truyền của dân tộc Mường mang trong nó nhiều nét độc đáo đậm đà bản sắc văn hóa dân gian Mường. Đây là một trong những sinh hoạt văn hóa rất được đồng bào Mường coi trọng bởi nó bắt đầu một giai đoạn mới của đời người. Người Mường là một trong những dân tộc đặc biệt coi trọng hôn nhân. Lễ cưới cổ truyền Mường thường gồm có 4 bước chính: Dạm hỏi (Ti kháo thiếng), Ăn hỏi (Ti nòm), Ra mắt chàng rể (Ti cháu) và Lễ đón dâu (Xước du). người Mường còn rất coi trọng hình thức thách cưới. Họ cho rằng, qua lễ vật mà nhà gái thách cưới đối với nhà trai, nó thể hiện sự tôn trọng của nhà trai đối với công lao sinh thành và nuôi dưỡng người con dâu. Lễ vật đó cũng thể hiện sự trân trọng của nhà trai đối với nhà gái và để đáp ơn nhà gái đã trao con cho họ. Quan hệ cộng đồng cũng được thể hiện qua Lễ cưới truyền thống Mường, ở đó thể hiện những ứng xử khéo léo, đề cao các nghi thức của mối quan hệ con người với con người, con người với xã hội (gia đình mở rộng, cộng đồng làng, bản) tạo điều kiện cho những thành viên mới của một đơn vị xã hội mới (đôi vợ chồng trẻ) biết tôn trọng nhau và biết củng cố sự bền chặt mối quan hệ của mình. Đây chính là ý nghiã đích thực của lễ cưới truyền thống người Mường trong đời sống văn hoá- xã hội hôm nay.</p>
+                <iframe style="margin-left: 90px;" width="935" height="526" src="https://www.youtube.com/embed/AOhYnNzSDVU" title="Phong tục Đám cưới dân tộc Mường từ A đến Z (Bản gốc)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <ul style="list-style: none;display: flex; flex-direction: column; gap: 30px;">
+                    <li>•	Canh tác: Do địa hình dốc nên người dân bản địa canh tác trên ruộng bậc thang là chủ yếu, với các cây trồng như lúa nước, ngô, sắn...</li>
+                    <li>•	Lễ hội, ẩm thực.</li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+
+    <footer style="margin-top: 30px;">
+      <p>TRẢI NGHIỆM VUI VẺ CÙNG CHÚNG TÔI VỚI NHỮNG ĐỊA ĐIỂM THÚ VỊ</p>
+    </footer>
+    <script src="trang7.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>
